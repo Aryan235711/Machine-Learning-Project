@@ -6,4 +6,4 @@ scipy
 statsmodels
 scikit-learn
 tensorflow
--e . # To run the script.py file automatically
+# -e . # To run the script.py file automatically

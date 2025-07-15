@@ -1,6 +1,6 @@
 import sys
-import logging # You're importing the module, not a specific logger instance
-from logger import LOG_FILE_PATH # Import LOG_FILE_PATH if needed, but logging config is in logger.py
+from src.logger import logging # You're importing the module, not a specific logger instance
+
 
 # It's better to get the configured logger instance
 # rather than relying on the root logger implicitly or trying to reconfigure it.
@@ -9,7 +9,7 @@ from logger import LOG_FILE_PATH # Import LOG_FILE_PATH if needed, but logging c
 # For simplicity, we'll continue using the implicitly configured root logger as your setup does.
 
 def error_message_detail(error, error_detail:sys): # error_detail should be the tuple from sys.exc_info()
-    _, _, exc_tb = error_detail # Correctly unpack the tuple
+    _, _, exc_tb = error_detail.exc_info() # Correctly unpack the tuple
     
     file_name = exc_tb.tb_frame.f_code.co_filename
     line_number = exc_tb.tb_lineno
@@ -36,6 +36,8 @@ class CustomException(Exception):
         return self.error_message
     
 
+
+# This is just an example to show how you might use the CustomException class.
 if __name__ == '__main__':
     try:
         a = 1/0
