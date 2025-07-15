@@ -6,4 +6,5 @@ scipy
 statsmodels
 scikit-learn
 tensorflow
+dill
 # -e . # To run the script.py file automatically
