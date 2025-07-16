@@ -9,4 +9,5 @@ tensorflow
 dill
 catboost
 xgboost
+flask
 # -e . # To run the script.py file automatically
