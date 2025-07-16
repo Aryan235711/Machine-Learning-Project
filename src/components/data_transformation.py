@@ -1,3 +1,5 @@
+# Transformation.py is used for data preprocessing and transformation
+# It includes functions for scaling, encoding, and saving the preprocessed data
 import sys
 import os
 from dataclasses import dataclass

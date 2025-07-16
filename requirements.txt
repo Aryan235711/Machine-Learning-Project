@@ -7,4 +7,6 @@ statsmodels
 scikit-learn
 tensorflow
 dill
+catboost
+xgboost
 # -e . # To run the script.py file automatically
